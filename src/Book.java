@@ -1,0 +1,23 @@
+public abstract class Book {
+
+    private String isbn;
+    private String title;
+    private int publishYear;
+    private double price;
+
+    public Book(String isbn, String title, int publishYear, double price){
+        this.isbn = isbn;
+        this.title = title;
+        this.publishYear = publishYear;
+        this.price = price;
+    }
+
+    public String getIsbn(){return isbn;}
+    public String getTitle(){return title;}
+    public int getPublishYear(){return publishYear;}
+    public double getPrice(){return price;}
+
+    public abstract void sell(int quantity, String email, String address, ShippingService shipService,
+                              MailService mailService);
+
+}
