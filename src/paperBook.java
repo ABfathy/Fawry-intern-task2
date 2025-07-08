@@ -14,8 +14,8 @@ public class paperBook extends Book{
         }
 
         stock -= quantity;
-        System.out.println( getTitle()+ " ordered for shipping to address " + address + " with total price of "
-                + (quantity * getPrice()));
+        System.out.println( getTitle() + " of quantity: " + quantity + " ordered for shipping to address " + address
+                + " with total price of " + (quantity * getPrice()));
 
         if(shipService != null){
             shipService.ship(address,getTitle());
